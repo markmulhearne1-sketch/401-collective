@@ -272,10 +272,16 @@
     }
 
     .highlight-yellow {
-      background: rgba(255, 209, 51, 0.22);
       color: inherit;
-      padding: 0 8px;
-      border-radius: 8px;
+      padding: 0 3px;
+      background-image: linear-gradient(
+        to bottom,
+        transparent 66%,
+        rgba(255, 214, 51, 0.5) 66%
+      );
+      background-repeat: repeat;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .hero-description {
