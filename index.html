@@ -616,6 +616,55 @@
       color: var(--ink);
     }
 
+    .why-section {
+      background: var(--bg-elevated);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      background: var(--bg);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--green);
+      transform: translateY(-4px);
+    }
+
+    .stat-value {
+      margin-bottom: 12px;
+      color: var(--green);
+      font-family: "DM Mono", monospace;
+      font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .stat-label {
+      color: var(--text-dim);
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .stat-source {
+      display: block;
+      margin-top: 10px;
+      color: var(--text-dim);
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -816,6 +865,10 @@
         grid-template-columns: 1fr 1fr;
         row-gap: 40px;
       }
+
+      .stat-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 560px) {
@@ -867,7 +920,8 @@
 
       .feature-grid,
       .process-grid,
-      .form-row {
+      .form-row,
+      .stat-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1014,11 +1068,64 @@
       </div>
     </section>
 
+    <section class="why-section" id="why-401">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="number">01 / Why 401</span>
+
+            <h2>
+              The busiest highway in North America runs through your backyard.
+            </h2>
+          </div>
+
+          <p>
+            The 401 isn't just a road — it's the artery of the GTA economy.
+            A corridor that big deserves a community that's just as serious.
+          </p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value">828 km</div>
+            <div class="stat-label">
+              Stretching from Windsor to the Quebec border — one of the
+              busiest highways on the continent.
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value">416,000+</div>
+            <div class="stat-label">
+              Vehicles a day through its busiest Toronto stretch, with parts
+              running up to 18 lanes wide.
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value">$600M+</div>
+            <div class="stat-label">
+              Worth of goods moved through that same stretch every single
+              day.
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-value">41,000</div>
+            <div class="stat-label">
+              Trucks a day keeping that corridor — and the businesses
+              behind it — running.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="community">
       <div class="container">
         <div class="section-top">
           <div>
-            <span class="number">01 / The network</span>
+            <span class="number">02 / The network</span>
 
             <h2>
               Built for people who keep the wheels turning.
@@ -1071,7 +1178,7 @@
     <section class="events-section" id="events">
       <div class="container event-layout">
         <div>
-          <span class="number">02 / Four times a year</span>
+          <span class="number">03 / Four times a year</span>
 
           <h2>
             Good people.<br />
@@ -1108,7 +1215,7 @@
       <div class="container">
         <div class="section-top">
           <div>
-            <span class="number">03 / Across every industry</span>
+            <span class="number">04 / Across every industry</span>
 
             <h2>
               Different industries. Similar challenges.
@@ -1144,7 +1251,7 @@
       <div class="container">
         <div class="section-top">
           <div>
-            <span class="number">04 / How it works</span>
+            <span class="number">05 / How it works</span>
 
             <h2>Simple by design.</h2>
           </div>
@@ -1199,7 +1306,7 @@
     <section class="join-section" id="join">
       <div class="container join-layout">
         <div>
-          <span class="number">05 / Founding members</span>
+          <span class="number">06 / Founding members</span>
 
           <h2>
             Build a better fleet network in the GTA.
