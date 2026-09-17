@@ -1448,6 +1448,8 @@
   <script>
     const form = document.getElementById("joinForm");
     const successMessage = document.getElementById("successMessage");
+    const SHEETS_ENDPOINT =
+      "https://script.google.com/macros/s/AKfycbxbP8DBeefsWsp_EcJBREFZQPJ1FCgZ5od2k0alnNe6d7OUD7EULqwkMuOfn8DL4H-Q4Q/exec";
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -1459,6 +1461,15 @@
       submitButton.innerHTML = "Submitting...";
 
       const formData = new FormData(form);
+
+      // Fire-and-forget copy of the submission into the Signups & Responses
+      // Google Sheet. This runs alongside (not instead of) the FormSubmit
+      // email below, and never blocks or affects the visible form flow.
+      fetch(SHEETS_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      }).catch(() => {});
 
       fetch(form.action, {
         method: "POST",
