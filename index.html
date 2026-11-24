@@ -984,6 +984,13 @@
       color: var(--green);
     }
 
+    .join-layout > div > p.expansion-note {
+      margin-top: 22px;
+      border-left: 2px solid var(--green);
+      padding-left: 14px;
+      color: var(--text);
+    }
+
     @media (max-width: 850px) {
       .nav-links {
         display: none;
@@ -1479,6 +1486,10 @@
             application and follow up with details about the Slack community
             and upcoming events.
           </p>
+
+          <p class="expansion-note">
+            Launching in the GTA first. Want 401 Collective in your city? Tell us where.
+          </p>
         </div>
 
         <form
@@ -1571,6 +1582,13 @@
               <option>251+ vehicles</option>
             </select>
           </div>
+
+          <input
+            type="text"
+            name="city"
+            placeholder="Your city (optional)"
+            aria-label="Your city (optional)"
+          />
 
           <textarea
             name="message"
