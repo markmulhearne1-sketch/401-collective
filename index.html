@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark" />
-  <meta name="theme-color" content="#14141c" />
+  <meta name="theme-color" content="#0a0a0c" />
 
   <title>401 Collective: The GTA Fleet Network</title>
 
@@ -26,15 +26,15 @@
 
   <style>
     :root {
-      --bg: #14141c;
-      --bg-elevated: #191922;
-      --bg-elevated-2: #1f1f29;
-      --ink: #14141c;
+      --bg: #0a0a0c;
+      --bg-elevated: #141417;
+      --bg-elevated-2: #1c1c20;
+      --ink: #0a0a0c;
       --text: #ffffff;
-      --text-dim: #d6a9ab;
-      --line: rgba(245, 192, 192, 0.22);
-      --green: #f5c0c0;
-      --green-dark: #e8a7aa;
+      --text-dim: #a8a8a2;
+      --line: rgba(255, 255, 255, 0.14);
+      --green: #FDCB25;
+      --green-dark: #E5B30D;
       --radius: 4px;
       --max-width: 1240px;
     }
@@ -826,8 +826,8 @@
     body {
       background-color: var(--bg);
       background-image:
-        linear-gradient(rgba(245, 192, 192, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(245, 192, 192, 0.045) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
       background-size: 64px 64px;
     }
 
@@ -850,7 +850,7 @@
     .event-layout h2,
     .join-layout h2 {
       font-size: clamp(2.2rem, 4.6vw, 4.4rem);
-      background: linear-gradient(55deg, #ffffff 20%, rgba(245, 192, 192, 0.85) 100%);
+      background: linear-gradient(55deg, #ffffff 20%, rgba(253, 203, 37, 0.95) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -864,7 +864,7 @@
     .site-header {
       border: 1px solid var(--line);
       border-radius: 4px;
-      background: rgba(20, 20, 28, 0.85);
+      background: rgba(10, 10, 12, 0.85);
       box-shadow: none;
     }
 
@@ -877,7 +877,7 @@
     }
 
     .button {
-      border-color: rgba(245, 192, 192, 0.45);
+      border-color: rgba(253, 203, 37, 0.55);
       background: transparent;
       color: var(--green);
     }
@@ -906,16 +906,16 @@
     }
 
     .hero {
-      background: radial-gradient(circle at 50% 28%, rgba(245, 192, 192, 0.10), transparent 34%);
+      background: radial-gradient(circle at 50% 28%, rgba(253, 203, 37, 0.13), transparent 34%);
     }
 
     .hero::before,
     .hero::after {
-      border-color: rgba(245, 192, 192, 0.14);
+      border-color: rgba(255, 255, 255, 0.08);
     }
 
     .hero-label {
-      background: rgba(245, 192, 192, 0.05);
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .demo-window,
@@ -932,16 +932,16 @@
     }
 
     .feature-card {
-      background: rgba(25, 25, 34, 0.7);
+      background: rgba(20, 20, 23, 0.7);
     }
 
     .feature-card.dark,
     .stat-card {
-      background: rgba(20, 20, 28, 0.7);
+      background: rgba(10, 10, 12, 0.7);
     }
 
     .feature-card:hover {
-      background: rgba(245, 192, 192, 0.08);
+      background: rgba(253, 203, 37, 0.08);
       border-color: var(--green);
       color: var(--text);
     }
@@ -963,7 +963,7 @@
 
     .join-form {
       border: 1px solid var(--line);
-      background: rgba(25, 25, 34, 0.85);
+      background: rgba(20, 20, 23, 0.85);
       box-shadow: none;
     }
 
@@ -971,6 +971,17 @@
     .join-form select,
     .join-form textarea {
       border-radius: 2px;
+    }
+
+    .join-form .button {
+      border-color: var(--green);
+      background: var(--green);
+      color: var(--ink);
+    }
+
+    .join-form .button:hover {
+      background: transparent;
+      color: var(--green);
     }
 
     @media (max-width: 850px) {
